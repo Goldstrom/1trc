@@ -19,7 +19,7 @@ bucket = "s3://coiled-datasets-rp/1trc"
 def generate_chunk(partition_idx, bucket, chunksize, std, lookup_df):
     """Generate some sample data based on the lookup table."""
 
-    rng = np.random.default_rng(partition_idx)  # Determinisitic data generation
+    rng = np.random.default_rng(partition_idx)  # Deterministic data generation
     df = pd.DataFrame(
         {
             # Choose a random station from the lookup table for each row in our output
